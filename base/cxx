@@ -1,0 +1,17 @@
+#include "common.hxx"
+
+signed
+main() {
+
+    std::vector<std::string> lines{};
+    {
+        std::fstream input{"input"};
+
+        std::string line;
+        while ( std::getline(input, line) ) {
+            lines.push_back(std::move(line));
+        }
+    }
+
+    return 0;
+}
